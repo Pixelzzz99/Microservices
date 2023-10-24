@@ -6,6 +6,7 @@ import { UserId } from '../guards/user.decorator';
 export class UserController {
   constructor() {}
 
+
   @UseGuards(JWTAuthGuard)
   @Post('info')
   async info(@UserId() userId: string) {}
